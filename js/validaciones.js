@@ -1,11 +1,22 @@
-const inputNacimiento = document.querySelector("#birth");
+export function valida(input) {
+    const tipoDeInput = input.dataset.tipo//dataset conecta con odos los data del html y .tipo hace referencia al los que tengan ese agreago que puede ser la palabra que querramos
+    if(validadores[tipoDeInput]){//verifico que si dentro de validadores exise tipoDeInput coincidiendo el nombre de tipo="nacimiento" con nacimiento del objeto de validadores
+        validadores[tipoDeInput](input)
+    }
+}
 
-inputNacimiento.addEventListener("blur", (evento) => {
-    validarNacimiento(evento.target);
-})
+const validadores = {//aqui tenemos un objejo nacimiento que tenemos que hacer conicidir con el nombre del data-tipo="nacimiento"
+    nacimiento: input => validarNacimiento(input)
+}
 
 function validarNacimiento(input) {
-    let mensaje = "hola"
+    const fechaCliente = new Date(input.value);
+    let mensaje = ""
+    if (!MayorDeEdad(fechaCliente)) {
+        mensaje = "almenos debes tener 18 años"
+        console.log(mensaje)
+    }
+
     input.setCustomValidity(mensaje);
 }
 
@@ -16,5 +27,6 @@ function MayorDeEdad(fecha){
         fecha.getUTCMonth(),
         fecha.getUTCDate()
     );
+    console.log(diferenciaFechas,fechaActual);
     return diferenciaFechas <= fechaActual;
-};
+}
