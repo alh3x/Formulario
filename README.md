@@ -46,3 +46,28 @@ Les comento que tengo un curso aquí en Alura Latam sobre las regex, les dejo el
 
 Una sugerencia es buscar ejemplos de regex en internet y pegarlos en ese validador para ver las explicaciones. Tenemos que recordar que una regex puede estar formada por diversas reglas, entender partes de la escritura de algunas de estas expresiones puede facilitar el entendimiento en la hora de escribir tus propias reglas.
 
+
+Mensajes del navegador
+PRÓXIMA ACTIVIDAD
+
+Cuando existe algún error de validación en el formulario aparecerá un mensaje arriba del campo explicando o dando algún tip para corregirlo. Pero en el proyecto existe una estilización y una tag <span> para enseñar un mensaje de error directo en el HTML.
+
+Elije las opciones que mejor definen las motivaciones para no utilizar el mensaje padrón del navegador:
+
+La estilización del mensaje padrón puede cambiar de navegador a navegador.
+¡Alternativa correcta! Los navegadores tienes diferentes formas de implementar las estilizaciones de sus mensajes de error y esa inconsistencia puede impactar en decisiones importantes para el equipo de diseño.
+
+El idioma en el cual se enseña el mensaje puede cambiar de navegador a navegador.
+¡Alternativa correcta! Dependiendo del idioma que el navegador fue instalado los mensajes de error pueden venir de acuerdo con ese idioma. El problema es que los mensajes de errores customizados no son traducidos, lo que causa inconsistencia de la información.
+
+La estilización del mensaje padrón no puede ser alterada.
+¡Alternativa correcta! No existe una manera de estilizar el mensaje padrón del navegador. La estilización es implementada por el mismo.
+
+Lo que aprendimos en esta aula:
+
+A instalar y utilizar el plugin Liveserver.
+Como descargar y correr el Browser-Sync.
+Como enseñar el mensaje de error directamente en el HTML.
+Como customizar los mensajes de error de validación.
+
+---------
